@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NAME TIME BUTTON CSS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: blueviolet;
+            transition: all .55s;
+        }  
+
+        div {
+            text-align: center;
+        }
+
+        button {
+            border: 3px solid green;
+            padding: 30px 40px;
+            border-radius: 90px;
+            background: transparent;
+            cursor: pointer;
+            outline: none;
+        }
+
+        h1, h3 {
+            animation: down 1s ;
+        }
+
+        @keyframes down {
+            from {
+                transform: translateY(-150px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div>  
+            <h3>Привет, Александр</h3>
+            <h1>Сейчас 17:00:00</h1>
+            <button><h2>Сменить фон</h2></button>
+        </div>
+
+    <script>
+        const name = prompt('Как Вас зовут?')
+        document.querySelector('h3').textContent = 'Привет, ' + name
+        document.querySelector('h1').textContent = 'Сейчас '
+         + new Date().toLocaleTimeString()
+
+        setInterval(function() {
+        document.querySelector('h1').textContent = 'Сейчас '
+         + new Date().toLocaleTimeString()
+        }, 1000)
+
+        const colors = ['darkorange', 'darkorchid', 
+        'deepskyblue', 'gold', 'lawngreen', 'magenta', 'navy']
+        let index = 0
+
+        document.querySelector('button').onclick = function() {
+            document.body.style.background = colors[index]
+            index++
+            if (index >= colors.length) index = 0
+        }
+            </script>
+            </body>
+            </html>
