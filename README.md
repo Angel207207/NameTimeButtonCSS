@@ -1,2 +1,2 @@
-# RESULT SCHOOL Project
-https://github.com/Angel207207/NameTimeButtonCSS/
+# Result School Project
+https://angel207207.github.io/NameTimeButtonCSS/
